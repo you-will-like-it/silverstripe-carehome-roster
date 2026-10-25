@@ -25,8 +25,7 @@ use YouWillLikeIT\CareHome\Service\ZoneScope;
  * - "Danas u smjeni" block on the /portal home (updatePortalSlot, slot "home-top")
  * - handover receiver list narrowed to the workers of the next shift (updateHandoverReceivers)
  *
- * The hooks are called by silverstripe-carehome ≥ the release that adds them; with an older
- * base module this extension is simply inert.
+ * The hooks are provided by youwilllikeit/silverstripe-carehome ^1.0.
  *
  * @extends Extension<AbstractPortalController>
  */

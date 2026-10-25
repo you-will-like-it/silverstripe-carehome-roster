@@ -48,7 +48,7 @@ Cron radi tri stvari:
 - upozorava na nepopunjene smjene u naredna 2 dana;
 - kreira pravo na godišnji odmor za tekuću godinu, sa prenosom iz prethodne.
 
-**Osnovni modul:** traka „Moj raspored", blok „Danas u smjeni" i suženi izbor primaoca u primopredaji koriste tačke proširenja `updatePortalNavLinks`, `updatePortalSlot` i `updateHandoverReceivers`. Uz starije verzije osnovnog modula `/raspored` i dalje radi, samo te integracije izostaju.
+**Osnovni modul:** potreban je `youwilllikeit/silverstripe-carehome` ^1.0. Traka „Moj raspored", blok „Danas u smjeni" i suženi izbor primaoca u primopredaji koriste njegove tačke proširenja `updatePortalNavLinks`, `updatePortalSlot` i `updateHandoverReceivers`.
 
 **E-mail:** standardni Silverstripe mailer (`MAILER_DSN` u `.env`). Bez maila ostaju obavještenja u aplikaciji. Pošiljalac se postavlja kroz `RosterNotifier.from_address`.
 
