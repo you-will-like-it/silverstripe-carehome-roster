@@ -1,0 +1,34 @@
+{
+    "name": "youwilllikeit/silverstripe-carehome-roster",
+    "description": "Shift roster add-on for youwilllikeit/silverstripe-carehome: workers, contracts, shift types, monthly planning board with working-time rules, absences and leave balance, shift swaps, hours report.",
+    "type": "silverstripe-vendormodule",
+    "license": "proprietary",
+    "keywords": ["silverstripe", "carehome", "roster", "schichtplan", "raspored", "shift planning"],
+    "require": {
+        "php": "^8.3",
+        "silverstripe/framework": "^6.0",
+        "silverstripe/admin": "^3.0",
+        "silverstripe/template-engine": "^1.0",
+        "youwilllikeit/silverstripe-carehome": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YouWillLikeIT\\CareHome\\Roster\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YouWillLikeIT\\CareHome\\Roster\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "client"
+        ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

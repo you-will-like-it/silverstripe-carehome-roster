@@ -1,0 +1,23 @@
+/* CareHome roster – hours report (screen + print) */
+.rr-body { margin: 0; background: #f1f5f9; color: #0f172a; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.rr-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem; padding: 1rem 1.25rem; background: #fff; border-bottom: 1px solid #e2e8f0; }
+.rr-head h1 { margin: 0; font-size: 1.25rem; }
+.rr-muted { color: #64748b; margin: .25rem 0 0; }
+.rr-small { font-size: .8rem; margin-top: 1rem; }
+.rr-nav { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
+.rr-nav a { padding: .35rem .65rem; border-radius: .45rem; color: #155e63; text-decoration: none; font-weight: 600; }
+.rr-nav a:hover { background: #f1f5f9; }
+.rr-nav .rr-current { background: #155e63; color: #fff; }
+.rr-btn { border: 1px solid #cbd5e1; }
+.rr-main { padding: 1rem 1.25rem; overflow-x: auto; }
+.rr-table { border-collapse: collapse; background: #fff; min-width: 100%; font-variant-numeric: tabular-nums; }
+.rr-table th, .rr-table td { border: 1px solid #e2e8f0; padding: .4rem .55rem; text-align: right; white-space: nowrap; }
+.rr-table thead th { position: sticky; top: 0; background: #f8fafc; font-size: .8rem; }
+.rr-table tfoot th { background: #f1f5f9; }
+.rr-left { text-align: left !important; }
+.rr-plus { color: #b45309; font-weight: 600; }
+.rr-minus { color: #be123c; font-weight: 600; }
+@media print {
+  .rr-nav { display: none; }
+  .rr-body { background: #fff; }
+}

@@ -1,0 +1,49 @@
+/* CareHome roster – worker pages (/raspored). Complements the base portal styles (ch-*). */
+.rp-top { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-bottom: 1rem; }
+.rp-top h1 { margin: 0; font-size: 1.5rem; font-weight: 700; }
+.rp-section { padding: 1rem; margin-bottom: 1rem; }
+.rp-section h2 { margin: 0 0 .6rem; font-size: 1.1rem; font-weight: 700; }
+.rp-section h3 { margin: .8rem 0 .4rem; font-size: .95rem; font-weight: 600; }
+.rp-section-head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.rp-section-head h2 { margin-bottom: .4rem; }
+.rp-muted { color: #64748b; }
+.rp-small { font-size: .8rem; }
+.rp-lead { font-size: 1.1rem; font-weight: 600; margin: 0 0 .5rem; }
+.rp-badge { display: inline-block; min-width: 1.4rem; padding: 0 .4rem; border-radius: 999px; background: #e11d48; color: #fff; font-size: .75rem; text-align: center; }
+
+.rp-list { list-style: none; margin: 0; padding: 0; }
+.rp-list > li { padding: .55rem 0; border-bottom: 1px solid #e2e8f0; }
+.rp-list > li:last-child { border-bottom: 0; }
+.rp-unread strong::before { content: "● "; color: #0f766e; }
+.rp-list > li > .rp-muted { display: block; }
+.rp-row { display: flex; align-items: center; gap: .6rem; }
+.rp-grow { flex: 1; min-width: 0; }
+.rp-actions { margin-top: .4rem; }
+.rp-inline { display: inline; }
+
+.rp-code { display: inline-block; min-width: 2.1rem; padding: .1rem .35rem; border-radius: .35rem; font-size: .8rem; font-weight: 700; text-align: center; }
+.rp-pending { background-image: repeating-linear-gradient(135deg, rgb(255 255 255 / .45) 0 4px, transparent 4px 8px); }
+.rp-changed { color: #d97706; font-size: .75rem; }
+
+.rp-days { list-style: none; margin: 0; padding: 0; }
+.rp-days li { display: flex; gap: .75rem; padding: .45rem .3rem; border-bottom: 1px solid #f1f5f9; align-items: flex-start; }
+.rp-days .rp-weekend { background: #f8fafc; }
+.rp-days .rp-holiday { background: #fffbeb; }
+.rp-days .rp-today { box-shadow: inset 3px 0 0 #155e63; }
+.rp-date { width: 4.6rem; flex: none; }
+.rp-date small { color: #64748b; }
+.rp-shift { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem; margin-bottom: .2rem; }
+.rp-holiday-name { display: block; color: #b45309; }
+
+.rp-link-btn { border: 0; background: none; padding: .3rem .4rem; color: #155e63; font-weight: 600; font-size: .9rem; cursor: pointer; text-decoration: none; }
+.rp-small-btn { min-height: 2.4rem; padding: 0 .9rem; font-size: .9rem; }
+.rp-form { margin: .6rem 0 1rem; }
+.rp-form .ch-label { margin-top: .6rem; }
+.rp-two { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+.rp-submit { width: 100%; margin-top: .9rem; }
+.rp-leave { margin: 0 0 .4rem; }
+
+.rp-status { display: inline-block; margin-top: .15rem; padding: 0 .45rem; border-radius: 999px; background: #e2e8f0; font-size: .75rem; font-weight: 600; }
+.rp-status-Pending { background: #fef3c7; color: #92400e; }
+.rp-status-Approved { background: #d1fae5; color: #065f46; }
+.rp-status-Rejected { background: #ffe4e6; color: #9f1239; }

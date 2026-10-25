@@ -1,0 +1,12 @@
+---
+Name: carehome-roster-routes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+  - '#carehome-routes'
+---
+SilverStripe\Control\Director:
+  rules:
+    'raspored-plan': YouWillLikeIT\CareHome\Roster\Control\Admin\PlanBoardController
+    'raspored-izvjestaj': YouWillLikeIT\CareHome\Roster\Control\Admin\RosterReportController
+    'raspored': YouWillLikeIT\CareHome\Roster\Control\Portal\RosterPortalController

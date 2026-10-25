@@ -1,0 +1,46 @@
+---
+Name: carehome-roster-audit
+After:
+  - '#carehome-audit'
+---
+# Every roster record is covered by the base module's field-level audit trail.
+# RosterNotification is deliberately not audited (pure messaging, high volume).
+YouWillLikeIT\CareHome\Roster\Model\Qualification:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\ContractType:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\ShiftType:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\AbsenceType:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\PublicHoliday:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\ShiftPattern:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\StaffingRequirement:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\RosterSettings:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\RosterPeriod:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\ShiftAssignment:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\Absence:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\ShiftSwapRequest:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension
+YouWillLikeIT\CareHome\Roster\Model\LeaveEntitlement:
+  extensions:
+    - YouWillLikeIT\CareHome\Extension\AuditableExtension

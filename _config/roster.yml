@@ -1,0 +1,47 @@
+---
+Name: carehome-roster
+After:
+  - '#carehome'
+---
+SilverStripe\Security\Member:
+  extensions:
+    - YouWillLikeIT\CareHome\Roster\Extension\MemberRosterExtension
+
+# /portal and /kuhinja: "Moj raspored" link, who is on shift today, handover receivers
+YouWillLikeIT\CareHome\Control\Portal\AbstractPortalController:
+  extensions:
+    - YouWillLikeIT\CareHome\Roster\Extension\PortalIntegrationExtension
+
+SilverStripe\Core\Injector\Injector:
+  YouWillLikeIT\CareHome\Roster\Service\PlanningService:
+    constructor:
+      - '%$YouWillLikeIT\CareHome\Roster\Service\AssignmentValidator'
+      - '%$YouWillLikeIT\CareHome\Roster\Service\RosterNotifier'
+  YouWillLikeIT\CareHome\Roster\Service\AbsenceService:
+    constructor:
+      - '%$YouWillLikeIT\CareHome\Roster\Service\PlanningService'
+      - '%$YouWillLikeIT\CareHome\Roster\Service\RosterNotifier'
+      - '%$YouWillLikeIT\CareHome\Roster\Service\LeaveBalanceService'
+  YouWillLikeIT\CareHome\Roster\Service\SwapService:
+    constructor:
+      - '%$YouWillLikeIT\CareHome\Roster\Service\AssignmentValidator'
+      - '%$YouWillLikeIT\CareHome\Roster\Service\PlanningService'
+      - '%$YouWillLikeIT\CareHome\Roster\Service\RosterNotifier'
+  YouWillLikeIT\CareHome\Roster\Service\StaffingService:
+    constructor:
+      - '%$YouWillLikeIT\CareHome\Roster\Service\WorkerDirectory'
+  YouWillLikeIT\CareHome\Roster\Service\RosterQuery:
+    constructor:
+      - '%$YouWillLikeIT\CareHome\Roster\Service\WorkerDirectory'
+
+# --- Typical overrides (app/_config/roster.yml) ------------------------------
+# YouWillLikeIT\CareHome\Roster\Model\RosterSettings:
+#   default_preset: 'FBiH'          # used only when the settings record is first created
+# YouWillLikeIT\CareHome\Roster\Service\RosterSeeder:
+#   enabled: false                  # no catalog seed
+# YouWillLikeIT\CareHome\Roster\Service\RosterNotifier:
+#   from_address: 'raspored@dom.local'
+# YouWillLikeIT\CareHome\Roster\Service\AbsenceService:
+#   sick_backdate_days: 3
+# YouWillLikeIT\CareHome\Roster\Service\RosterQuery:
+#   handover_window_minutes: 90
